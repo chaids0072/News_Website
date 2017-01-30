@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+  	<h3><%= @article.title %></h3>
+  </div>
+
+  <div class="panel-body">
+    <strong>Summay:</strong>
+    <p><%= @article.summary %></p>
+  </div>
+
+  <div class="panel-body">
+    <strong>Author:</strong>
+    <p><%= @article.author %></p>
+  </div>
+
+  <div class="panel-body">
+    <strong>Link:</strong>
+    <p><%= @article.link %></p>
+  </div>
+
+  <div class="panel-body">
+    <strong>Image:</strong>
+    <p><%= @article.image %></p>
+  </div>
+
+  <div class="panel-body">
+    <strong>Publication:</strong>
+  	<p><%= @article.pubDate %></p>
+  </div>
+
+    <div class="panel-body">
+    <strong>tags:</strong>
+    <p><%= @article.tag_list %></p>
+  </div>
+
+  <% if @article.provider%>
+	<div class="panel-footer">By <%= @article.provider.source_name %></div>
+  <% end %>
+</div>
+
+<div class="btn-group pull-right" role="group">
+    <%= link_to 'Back', articles_path ,class: "btn btn-default" %>
+</div>
+
+
